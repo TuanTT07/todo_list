@@ -12,9 +12,11 @@
     "@types/node": "^16.7.13",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "prop-types": "^15.8.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-scripts": "5.0.1",
+    "sass": "^1.97.2",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
@@ -22,7 +24,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext js,jsx,ts,tsx src/",
+    "lint:fix": "eslint --fix --ext js,jsx,ts,tsx src/",
+    "prettier": "prettier --check \"src/**/(*.jsx|*.js|*.tsx|*ts|*.css|*.scss)\"",
+    "prettier:fix": "prettier --write \"src/**/(*.jsx|*.js|*.tsx|*ts|*.css|*.scss)\""
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +47,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/prop-types": "^15.7.15",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.7.4"
   }
 }
